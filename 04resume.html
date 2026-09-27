@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>履歷</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="04resume.css" />
+  <meta property="og:title" content="張惠芯的個人網頁" />
+  <meta property="og:description" content="求職自傳履歷網頁" />
+  <meta property="og:image" content="https://ana-web-six.vercel.app/image/logo0.png />
+  <meta property="og:url" content="https://ana-web-six.vercel.app/" />
+</head>
+<body>
+  <header>
+    <div class="logo">履歷</div>
+    <button class="menu-button" onclick="toggleMenu()">Menu ☰</button>
+  </header>
+
+  <div class="menu-content" id="menuContent">
+    <a href="01main.html">個人簡介</a>
+    <a href="02experience.html">經歷&工作經驗</a>
+    <a href="03certificates.html">證照&比賽</a>
+    <a href="04resume.html">履歷</a>
+    <!-- <a href="05robot.html">與我聊天</a> -->
+  </div>
+
+  <div class="container">
+    <section id="resume" class="profile-section">
+      <div class="container2">
+        <section class="resume-layout">
+          <div class="left">
+            <div class="photo-name">
+              <div class="photo-frame">
+                <img src="image/self2.jpg" alt="個人照片">
+              </div>
+              <div class="name-block">
+                <h2>張惠芯</h2>
+                <p class="eng-name">Ana Chang</p>
+              </div>
+            </div>
+
+            <div class="contact">
+              📞 0958-<br>
+              📧 s1120053@o365st.pu.edu.tw<br>
+              🏢 靜宜大學 資管系
+            </div>
+
+            <div class="language">
+              <h3>Language</h3>
+              <ul>
+                <li>Chinese</li>
+                <li>English</li>
+                <li>Vietnamese</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="right-content">
+            <div class="right-inner"></div>
+              <div>
+                <h2>應徵職務：</h2>
+                <p></p>
+              </div>
+              <div class="spaced">
+                <h2>適任原因：</h2>
+                <p>技術專精、美感兼具、熱愛創新學習</p>
+              </div>
+              <div class="spaced license-block">
+                <h2>證照：</h2>
+                <ul class="bullet-list">
+                  <li>視覺化軟體應用師</li>
+                  <li>ERP規劃師</li>
+                  <li>電腦軟體應用丙級</li>
+                  <li>商教商檢二、三級</li>
+                  <li>IELTS B2</li>
+                  <li>越南語A2</li>
+                </ul>
+              </div>
+              <div class="spaced two-columns">
+                <div class="column">
+                  <h2>技能：</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Java<wbr>Script</li>
+                    <li>
+                      <a href="https://github.com/hhc-a" target="_blank">
+                        <span class="breakable">GitHub</span> <span class="breakable">專案</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <h2>辦公軟體：</h2>
+                  <ul>
+                    <li>Word</li>
+                    <li>Excel</li>
+                    <li>Power<wbr>Point</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+    
+    // 響應式檢測
+    window.addEventListener('resize', function() {
+      const menuContent = document.getElementById("menuContent");
+      if (window.innerWidth > 768) {
+        menuContent.style.display = "none";  // 在大螢幕切換時重置選單
+      }
+    });
+  </script>
+  <footer>
+    Copyright © 張惠芯. All Rights Reserved.
+  </footer>
+</body>
+</html>

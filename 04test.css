@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&display=swap');
+* {
+  font-family: 'Mali', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Mali', sans-serif;
+  background-color: #d9b3ff;
+  color: #333;
+}
+
+header {
+  background-color: #cc7be5;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-top:5px solid #cc7be5;
+  border-bottom: 5px solid #cc7be5;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: 'Mali', sans-serif;
+  font-weight: bold;
+  color: #000;
+}
+
+.menu-button {
+  background: none;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Mali', sans-serif;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  background-color: #cc7be5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 150px;
+  z-index: 100;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #d9b3ff;
+}
+
+.menu-content a:hover {
+  background-color: #d9b3ff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+#resume h3 {
+  font-size: 1.5rem;
+  font-family: 'Mali', sans-serif;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.job-title span {
+  display: inline;
+}
+
+.info-list div {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-family: 'Mali', sans-serif;
+  padding-left: 1rem;
+  border-left: 4px solid #cc7be5;
+}
+
+.divider {
+  height: 2px;
+  background-color: #cc7be5;
+  margin: 2rem 0;
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: auto;
+  /* padding: 20px; */
+}
+
+.resume-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border: 2px solid #000;
+  background-color: #e6d4fa;
+  border-radius: 12px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 保持從上方排列 */
+  padding-top: 20px; /* 控制內容距離上方的距離 */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.photo-name {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /* transform: translateY(-40px); */
+  margin-bottom: 50px;
+}
+
+.photo-frame {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #b577d1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-block h2 {
+  font-size: 2rem;
+  font-family: 'Mali', sans-serif;
+  margin: 0;
+  color: #000;
+}
+
+.eng-name {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-family: 'Mali', sans-serif;
+  color: #000;
+}
+
+.contact, .language {
+  font-size: 1.1rem;
+  font-family: 'Mali', sans-serif;
+  margin-bottom: 0px;
+  color: #000;
+  padding-left: 30px; /* 調整這裡，縮進內容 */
+}
+
+.language ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.language li::before {
+  content: '_ ';
+}
+
+.bullet-list {
+  list-style-type: disc;
+  padding-left: 1.2em; /* 控制整體縮進距離 */
+  margin-left: 0.5em;  /* 微調靠左的位置 */
+}
+
+.bullet-list li {
+  margin-bottom: 5px;  /* 項目間的間距，可依喜好調整 */
+}
+
+.right-content {
+  display: block;
+  padding: 2rem;
+  margin-top: 0;
+}
+
+.right-inner {
+  padding-top: 30px; /* 可調整數值 */
+}
+
+.right-content h2 {
+  font-size: 1.3rem;
+  font-family: 'Mali', sans-serif;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.right-content p,
+.right-content li,
+.right-content a {
+  font-size: 1.3rem;
+  font-family: 'Mali', sans-serif;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 0;
+}
+
+.right-content .spaced {
+  margin-top: 2rem;
+}
+
+.right-content ol {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.right-content li {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem; /* 欲視覺間距可以自行調整 */
+}
+
+.two-columns .column {
+  flex: 1;
+}
+
+.nowrap {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.right-content ul {
+  margin: 0;
+  padding-left: 1.9rem; /* 控制縮排距離，可調整 */
+}
+
+.right-content li {
+  list-style-type: disc;        /* 使用點點 */
+  list-style-position: outside; /* 點點靠左、文字靠右 */
+  word-break: break-word;
+  font-size: 1.3rem;
+  font-family: 'Mali', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+footer {
+  text-align: center;
+  background-color: #b577d1;
+  padding: 10px;
+  color: white;
+  margin-top: 40px;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 768px) {
+  .job-title span {
+    display: block;
+  }
+
+  .resume-layout {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .photo-name {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .photo-frame {
+    width: 150px;
+    height: 150px;
+  }
+
+  .right-content {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .breakable {
+    display: block;
+  }
+}

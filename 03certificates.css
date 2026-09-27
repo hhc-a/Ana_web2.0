@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&display=swap');
+* {
+  font-family: 'Mali', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Mali', sans-serif;
+    background-color: #e8ccff;
+    color: #333;
+  }
+  
+  header {
+    background-color: #b577d1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-top:5px solid #b577d1;
+    border-bottom: 5px solid #b577d1;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Mali', sans-serif;
+    color: #000;
+  }
+  
+  .menu-button {
+    background: none;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Mali', sans-serif;
+  }
+  
+  .menu-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    background-color: #cc7be5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 150px;
+    z-index: 100;
+  }
+  
+  .menu-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #d9b3ff;
+  }
+  
+  .menu-content a:hover {
+    background-color: #d9b3ff;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+
+.job-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: 'Mali', sans-serif;
+  }
+  
+  .job-item > div {
+    flex: 1 1 60%;
+  }
+  
+  .job-item img {
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin-left: 20px;
+    flex-shrink: 0;
+  }
+
+  .divider {
+    border-top: 2px solid #cc7be5;
+    margin: 20px 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .job-item {
+      flex-direction: column;
+      align-items: center;  /* ✅ 這裡改為 center 對齊圖片 */
+      /* text-align: center;   ✅ 讓文字也一併置中 */
+    }
+  
+    .job-item img {
+      margin-left: 0;
+      margin-top: 15px;
+      max-width: 100%;
+    }
+  } 
+
+  footer {
+    text-align: center;
+    background-color: #b577d1;
+    padding: 10px;
+    color: white;
+    margin-top: 40px;
+  }

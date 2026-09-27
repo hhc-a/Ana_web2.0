@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>經歷&工作經驗</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="02experience.css" />
+  <meta property="og:title" content="張惠芯的個人網頁" />
+  <meta property="og:description" content="求職自傳履歷網頁" />
+  <meta property="og:image" content="https://ana-web-six.vercel.app/image/logo0.png />
+  <meta property="og:url" content="https://ana-web-six.vercel.app/" />
+</head>
+<body>
+  <header>
+    <div class="logo">經歷&工作經驗</div>
+    <button class="menu-button" onclick="toggleMenu()">Menu ☰</button>
+  </header>
+
+  <div class="menu-content" id="menuContent">
+    <a href="01main.html">個人簡介</a>
+    <a href="02experience.html">經歷&工作經驗</a>
+    <a href="03certificates.html">證照&比賽</a>
+    <a href="04resume.html">履歷</a>
+    <!-- <a href="05robot.html">與我聊天</a> -->
+  </div>
+
+  <div class="container">
+    <!-- 經歷 -->
+    <section class="test-block" style="background-color: #d9b3ff;">
+      <h2>經歷</h2>
+      <div class="images-row">
+        <div class="experience-list">
+          <p>● 2026 台灣積體電路製造股份有限公司-DIF 機台基礎</p>
+          <p>● 2025 勞動部勞動力發展署-青年菁英學苑</p>
+          <p>● 2025/08至2026/01 靜宜大學 資管系 專業服務學習教學助理</p>
+          <p>● 2024/09至2025/06 班級學藝</p>
+          <p>● 2024/02至2024/06 靜宜大學 資管系 設計思考與實踐課程助理</p>
+          <p>● 2023/09至2024/06 班級學藝</p>
+          <p>● 2022/10 電腦視覺人工智慧工作坊</p>
+          <p>● 2022/08/17至2022/08/09內政部移民署 新住民子女多元文化在地創生培育營</p>
+          <p>● 2022/07/25至2022/07/29 新住民子女國際職場體驗暨語文增能活動</p>
+          <p>● 2021/09至2022/01 壽山高中 手語社第十屆 總務股長</p>
+          <p>● 2020/09至2022/06 壽山高中 九字糾察隊</p>
+        </div>
+        <div>
+          <img class="experience-img" src="image/experience.jpg" alt="experience image">
+        </div>
+      </div>
+    </section>
+
+    <!-- 工作經驗 -->
+    <section class="test-block" style="background-color: #d9b3ff;">
+      <h2>工作經驗</h2>
+      <div class="images-row">
+        <div class="experience-list">
+          <p>● 2025/09至今 靜宜大學 資管系辦 工讀生</p>
+          <p>● 2025/07-2025/08 桃園市八德區公所 民政課 工讀生</p>
+          <p>● 2025/02至今 靜宜大學 資訊處 工讀生</p>
+          <p>● 2023/10至今 靜宜大學 住宿組 工讀生</p>
+        </div>
+        <div>
+          <img src="image/work.jpg" alt="work image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Holland 
+    <section class="test-block holland-section" style="background-color: #d9b3ff;">
+      <h2>Holland碼</h2>
+      <div class="images-row">
+        <div>
+          <p class="result-title">我的結果：</p>
+          <img src="image/holland_result.png" alt="Holland 測驗結果">
+        </div>
+        <div>
+          <p class="result-title">適合工作：</p>
+          <img src="image/holland_work.png" alt="Holland 適合工作">
+        </div>
+      </div>
+      <p class="description">
+        <span>我的Holland碼類型為 : I研究型 & E企業型</span><br>
+        <span>I研究型 : 「思考者」：理性的、重視理論與證據、喜歡分析與思考、追根究底</span><br>
+        <span>E企業型 : 「影響者」：有彈性、勇於冒險與競爭、喜歡統籌與規劃、發揮影響力</span><br>
+        <span><a class="holland-link" href="https://guide.104.com.tw/interest/IE" target="_blank">測出你的Holland碼</a></span>
+      </p>
+    </section>
+    -->
+  </div>
+
+  <script src="script.js"></script>
+  <footer>
+    Copyright © 張惠芯. All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+    
+    // 響應式檢測
+    window.addEventListener('resize', function() {
+      const menuContent = document.getElementById("menuContent");
+      if (window.innerWidth > 768) {
+        menuContent.style.display = "none";  // 在大螢幕切換時重置選單
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!-- suitable-jobs.html 適合工作 -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>證照&比賽</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="03certificates.css">
+    <meta property="og:title" content="張惠芯的個人網頁" />
+    <meta property="og:description" content="求職自傳履歷網頁" />
+    <meta property="og:image" content="https://ana-web-six.vercel.app/image/logo0.png" />
+    <meta property="og:url" content="https://ana-web-six.vercel.app/" />
+</head>
+<body>
+    <header>
+        <div class="logo">證照&比賽</div>
+        <button class="menu-button" onclick="toggleMenu()">Menu ☰</button>
+    </header>
+    
+  <div class="menu-content" id="menuContent">
+    <a href="01main.html">個人簡介</a>
+    <a href="02experience.html">經歷&工作經驗</a>
+    <a href="03certificates.html">證照&比賽</a>
+    <a href="04resume.html">履歷</a>
+    <!-- <a href="05robot.html">與我聊天</a> -->
+  </div>
+    
+    <div class="container">
+        <section id="suitable-jobs" class="profile-section">
+            <div class="job-item">
+                <div>
+                    <h3>證照</h3>
+                    <p>● 2026/05 ICDL-Artificial Intelligence</p>
+                    <p>● 2026/04 Gemini Certified- Educator</p>
+                    <p>● 2026/04 Gemini Certified- University Student</p>
+                    <p>● 2026/04 Gemini Certified- Faculty</p>
+                    <p>● 2025/12 進階ERP規劃師-人力資源管理</p>
+                    <p>● 2025/11 雅思IELTS 等級：B2</p>
+                    <p>● 2025/07 視覺化軟體應用師</p>
+                    <p>● 2025/05 ICDL-MS-Word-2021</p>
+                    <p>● 2025/05 ICDL-Spreadsheets-MSExcel2021</p>
+                    <p>● 2025/05 ICDL-Presentation-MS2021</p>
+                    <p>● 2024/12 ERP 規劃師</p>
+                    <p>● 2023/03 商業管理能力-第二級</p>
+                    <p>● 2023/03 商業管理能力-第三級</p>
+                    <p>● 2022/12 越南語能力檢定 等級：A2</p>
+                    <p>● 2022/10 多益TOEIC 成績：770</p>
+                    <p>● 2021/10 電腦軟體應用技術士</p>
+                    <p>● 2020/11 商業教育英文能力 第二級</p>
+                </div>
+                <img src="image/licenses.png" alt="Licenses and Certificates">
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="job-item">
+                <div>
+                    <h3>比賽</h3>
+                    <p>● 2026 靜宜大學 國際學院英語寫作比賽-第一名</p>
+                    <p>● 2025 永續黑客松競賽-參賽</p>
+                    <p>● 2024 行動應用軟體開發-佳作</p>
+                    <p>● 2024 永續黑客松競賽-佳作</p>
+                    <p>● 2024 靜宜大學 網球系際盃 季軍</p>
+                    <p>● 2023 壽山高中 產品廣告製作競賽-最佳影片獎</p>
+                </div>
+                <img src="image/competition.jpg" alt="competition">
+            </div>
+            
+            <!-- 
+            <div class="divider"></div>
+            
+            <div class="job-item">
+                <div>
+                    <h3>遊戲企劃人員（Game Planner）</h3>
+                    <p>公司：美商時豪科技股份有限公司</p>
+                    <p>技能要求：擅長使用Windows 2000、Excel、Outlook、PowerPoint、Word，且具數值資料統計和分析能力</p>
+                    <p>工作內容：負責新遊戲企劃與設計，進行數據分析、專案測試及資料管理，並具備良好跨部門溝通與 UI/UX 規劃能力。</p>
+                </div>
+                <img src="image/Game.png" alt="ucan適合工作">
+            </div>
+            -->
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+  <footer>
+    Copyright © 張惠芯. All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+    
+    // 響應式檢測
+    window.addEventListener('resize', function() {
+      const menuContent = document.getElementById("menuContent");
+      if (window.innerWidth > 768) {
+        menuContent.style.display = "none";  // 在大螢幕切換時重置選單
+      }
+    });
+  </script>
+</body>
+</body>
+</html>

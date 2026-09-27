@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&display=swap');
+* {
+  font-family: 'Mali', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Mali', sans-serif;
+  background-color: #e8ccff;
+  color: #333;
+}
+
+header {
+  background-color: #b577d1;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-top:5px solid #b577d1;
+  border-bottom: 5px solid #b577d1;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: 'Mali', sans-serif;
+  font-weight: bold;
+  color: #000;
+}
+
+.menu-button {
+  background: none;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Mali', sans-serif;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  background-color: #cc7be5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 150px;
+  z-index: 100;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #d9b3ff;
+}
+
+.menu-content a:hover {
+  background-color: #d9b3ff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+#resume h3 {
+  font-size: 1.5rem;
+  font-family: 'Mali', sans-serif;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.job-title span {
+  display: inline;
+}
+
+.info-list div {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-family: 'Mali', sans-serif;
+  padding-left: 1rem;
+  border-left: 4px solid #cc7be5;
+}
+
+.divider {
+  height: 2px;
+  background-color: #cc7be5;
+  margin: 2rem 0;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.resume-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border: 2px solid #000;
+    background-color: #e6d4fa;
+    border-radius: 12px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 保持從上方排列 */
+    padding-top: 20px; /* 控制內容距離上方的距離 */
+    padding-left: 40px;
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+.photo-name {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* transform: translateY(-40px); */
+    margin-bottom: 50px;
+}
+
+.photo-frame {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #b577d1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name-block h2 {
+    font-size: 2rem;
+    font-family: 'Mali', sans-serif;
+    margin: -50px 0 0 0;
+    color: #000;
+}
+
+.eng-name {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-family: 'Mali', sans-serif;
+    color: #000;
+    margin-top: 10px;
+}
+
+.contact, .language {
+    font-size: 1.1rem;
+    font-family: 'Mali', sans-serif;
+    margin-bottom: 0px;
+    color: #000;
+    padding-left: 30px; /* 控制聯絡區塊縮排 */
+}
+
+.language ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.language li::before {
+    content: '_ ';
+}
+
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 1.2em;
+    margin-left: 0.5em;
+}
+
+.bullet-list li {
+    margin-bottom: 5px;
+}
+
+.right-content {
+    display: block;
+    padding: 2rem;
+    padding-right: 40px;
+    margin-top: 0;
+}
+
+.right-inner {
+    padding-top: 30px;
+}
+
+.right-content h2 {
+    font-size: 1.3rem;
+    font-family: 'Mali', sans-serif;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.right-content p,
+.right-content li,
+.right-content a {
+    font-size: 1.3rem;
+    font-family: 'Mali', sans-serif;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0;
+}
+
+.right-content .spaced {
+    margin-top: 2rem;
+}
+
+.right-content ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.right-content li {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.two-columns .column {
+    flex: 1;
+}
+
+.nowrap {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.right-content ul {
+    margin: 0;
+    padding-left: 1.9rem;
+}
+
+.right-content li {
+    list-style-type: disc;
+    list-style-position: outside;
+    word-break: break-word;
+    font-size: 1.3rem;
+    font-family: 'Mali', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+footer {
+    text-align: center;
+    background-color: #b577d1;
+    padding: 10px;
+    color: white;
+    margin-top: 40px;
+}
+  
+/* 響應式設計 */
+
+@media (max-width: 1200px) {
+    .resume-layout {
+      flex-direction: row; /* 保持橫向排版 */
+      padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .job-title span {
+    display: block;
+    }
+  
+    .resume-layout {
+        flex-direction: column;
+        align-items: center; /* 新增：讓子元素在交錯軸（橫向）置中 */
+        text-align: center;  /* 新增：讓內文靠中顯示 */
+    }
+    
+    .name-block h2 {
+        margin-top: -10px; /* 在小螢幕上減少上移的距離 */
+    }
+    
+    .eng-name {
+        margin-top: -3px;
+    }
+
+    .left {
+        align-items: center; /* 新增：讓左側內容也置中 */
+        text-align: center;  /* 新增：讓左側文字置中 */
+        padding-left: 0;     /* 移除左側 padding */
+    }
+
+    .right {
+        flex: none; /* 讓左右區塊在小螢幕下不再擴展填滿 */
+        width: 100%;
+    }
+
+    .photo-name {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact, .language {
+        font-size: 1rem; /* 手機版字體小一點 */
+        padding-left: 10px; /* 縮排少一點 */
+    }
+
+    .right-content {
+        text-align: center;  /* 新增：右側內容置中 */
+        padding-left: 0;     /* 移除左側 padding */
+        padding-right: 0;    /* 移除右側 padding */
+    }
+
+    /* 保持技能和辦公軟體左右並排 */
+    .two-columns {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .right-content ul {
+        text-align: left;         /* 清除 ul 的置中對齊 */
+        padding-left: 1.5rem;     /* 加回左邊縮排 */
+    }
+    
+    .right-content li {
+        text-align: left;         /* 列表文字靠左對齊 */
+        list-style-position: outside; /* 保持符號靠左 */
+    }
+
+    .two-columns .column {
+        flex: 0 0 calc(50% - 10px); /* 計算寬度減去間距 */
+        min-width: 120px; /* 設定最小寬度以確保可讀性 */
+    }
+
+    .breakable {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-layout {
+        padding: 10px;
+    }
+
+    .name-block h2 {
+        font-size: 1.6rem; /* 字體再調整 */
+    }
+
+    .eng-name {
+        font-size: 1rem;
+    }
+
+    .contact, .language {
+        font-size: 0.9rem; /* 調整聯絡區塊和語言的字體 */
+        padding-left: 10px;
+    }
+
+    .right-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .right-content p,
+    .right-content li {
+        font-size: 1.1rem;
+    }
+
+    .two-columns .column {
+        flex: 0 0 calc(50% - 5px); /* 進一步減小間距 */
+        min-width: 100px; /* 調整最小寬度 */
+    }
+}

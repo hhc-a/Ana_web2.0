@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&display=swap');
+* {
+  font-family: 'Mali', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Mali', cursive;
+  background-color: #e8ccff;
+  color: #333;
+}
+
+header {
+  background-color: #b577d1;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-top:5px solid #b577d1;
+  border-bottom: 5px solid #b577d1;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Mali', sans-serif;
+  color: #000;
+}
+
+.menu-button {
+  background: none;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Mali', cursive;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  background-color: #cc7be5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 150px;
+  z-index: 100;
+  font-family: 'Mali', cursive;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #d9b3ff;
+  font-family: 'Mali', cursive;
+}
+
+.menu-content a:hover {
+  background-color: #d9b3ff;
+}
+
+.container {
+  padding: 20px;
+}
+
+.test-block {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.test-block h2 {
+  margin-top: 0;
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+}
+
+.result-title {
+  font-size: 24px;
+  /* font-weight: bold; */
+  margin-bottom: 10px;
+  font-family: 'Mali', cursive;
+}
+
+.images-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; /* 圖片之間的間距 */
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  position: relative;
+  flex-direction: row;
+}
+
+.description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Mali', cursive;
+  white-space: nowrap; /* 不讓文字自動換行 */
+  overflow-x: auto; /* 超出寬度可滑動（電腦版） */
+}
+
+.description span {
+  display: inline-block;
+  margin-right: 20px; /* 間距可自調 */
+}
+
+.images-row div {
+  text-align: center;
+  flex: 1;
+  font-family: 'Mali', cursive;
+}
+
+.images-row img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+}
+
+.images-row .experience-img {
+  max-height: 600px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 經歷與工作經驗條列靠左對齊 */ 
+.images-row .experience-list { 
+  text-align: left; 
+} 
+
+.images-row .experience-list p { 
+  text-align: left; 
+  margin: 10px 0; 
+}
+
+/* 放大 Holland 照片 */
+.holland-section .images-row img {
+  max-width: 500px;
+}
+
+.holland-link:link {
+  color: #000;  /* 尚未點選過的顏色 */
+  text-decoration: underline;
+}
+
+.holland-link:visited {
+  color: #cc7be5;  /* 點選過後的顏色 */
+}
+
+.holland-link:hover {
+  color: #d9b3ff;  /* 滑鼠滑過的顏色（可選） */
+}
+
+.holland-link:active {
+  color: #cc7be5;  /* 點擊當下的顏色（可選） */
+}
+
+footer {
+  text-align: center;
+  background-color: #b577d1;
+  padding: 10px;
+  color: white;
+  margin-top: 40px;
+  font-family: 'Mali', cursive;
+}
+
+/* ---------------- 響應式設計 ---------------- */
+
+/* 平板 */
+@media (max-width: 1024px) {
+  .result-title {
+    font-size: 20px;
+    font-family: 'Mali', sans-serif;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .images-row {
+    gap: 20px;
+  }
+
+  .images-row img {
+    max-width: 300px;
+  }
+
+  .test-block {
+    padding: 12px;
+  }
+  
+  .description {
+    white-space: normal; /* 開放換行 */
+  }
+
+  .description span {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .holland-section .images-row img {
+    max-width: 350px;
+  }
+}
+
+/* 手機 */
+@media (max-width: 768px) {
+  .result-title {
+    font-size: 20px;
+    font-family: 'Mali', sans-serif;
+  }
+
+  .images-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .images-row img {
+    max-width: 250px;
+  }
+
+  .test-block h2,
+  .test-block p {
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Mali', sans-serif;
+    white-space: normal; /* 開放換行 */
+  }
+
+  .description span {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .images-row .ucan-work-img {
+    max-height: 300px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .holland-section .images-row img {
+    max-width: 300px;
+  }
+}
+
+/* 小手機 */
+@media (max-width: 480px) {
+  .result-title {
+    font-size: 18px;
+    font-family: 'Mali', sans-serif;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .images-row img {
+    max-width: 200px;
+  }
+
+  .test-block {
+    padding: 10px;
+  }
+
+  .test-block h2 {
+    font-size: 20px;
+    font-family: 'Mali', sans-serif;
+  }
+
+  .description {
+    font-size: 13px;
+    font-family: 'Mali', sans-serif;
+  }
+
+  .description span {
+    display: block;
+    margin-bottom: 8px;
+    white-space: normal; /* 開放換行 */
+  }
+
+  .holland-section .images-row img {
+    max-width: 250px;
+  }
+}

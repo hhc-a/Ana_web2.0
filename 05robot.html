@@ -1,0 +1,62 @@
+<!-- chat.html 與我聊天 -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>與我聊天</title>
+  <link rel="stylesheet" href="05robot.css">
+</head>
+<body>
+  <header>
+    <div class="logo">與我聊天</div>
+    <button class="menu-button" onclick="toggleMenu()">Menu ☰</button>
+  </header>
+  
+  <div class="menu-content" id="menuContent">
+    <a href="01main.html">個人簡介</a>
+    <a href="02result.html">經歷&工作經驗</a>
+    <a href="03work.html">證照&比賽</a>
+    <a href="04resume.html">履歷</a>
+    <a href="05robot.html">與我聊天</a>
+  </div>
+
+  <div class="container">
+    <!-- 中央對齊的聊天卡片 -->
+    <div class="card-wrapper center-align">
+      <div class="profile-card column">
+        <img src="image.png" alt="聊天機器人示意圖" class="circle-img">
+        <div class="text-content">
+          <h2>與我聊天</h2>
+          <hr>
+          <p>這裡是一個能與我互動的聊天機器人，歡迎輸入問題或想法，我會盡力回答你喔！</p>
+        </div>
+        <iframe
+          allow="microphone;"
+          width="350"
+          height="430"
+          src="https://console.dialogflow.com/api-client/demo/embedded/3ebafc74-dd05-4a7c-b484-b210cdbae55c">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    window.addEventListener('resize', function () {
+      const menuContent = document.getElementById("menuContent");
+      if (window.innerWidth > 768) {
+        menuContent.style.display = "none";
+      }
+    });
+  </script>
+
+  <footer>
+    Copyright © 張惠芯. All Rights Reserved.
+  </footer>
+</body>
+</html>
