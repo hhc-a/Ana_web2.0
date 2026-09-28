@@ -164,6 +164,15 @@ header {
   }
 }
 
+footer {
+  text-align: center;
+  background-color: #bad1ec;
+  padding: 12px 10px;
+  color: #333;
+  margin-top: auto;
+  width: 100%;
+}
+
 /* 手機768px 以下 */
 @media screen and (max-width: 768px) {
   .container {
@@ -221,7 +230,9 @@ header {
 
   footer {
     width: 100%;
+    background-color: #bad1ec;
     padding: 12px 10px;
+    color: #333;
     font-size: 14px;
     text-align: center;
     box-sizing: border-box;
