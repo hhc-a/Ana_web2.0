@@ -18,13 +18,13 @@
         <button class="menu-button" onclick="toggleMenu()">Menu ☰</button>
     </header>
     
-  <div class="menu-content" id="menuContent">
-    <a href="01main.html">個人簡介</a>
-    <a href="02experience.html">經歷&工作經驗</a>
-    <a href="03certificates.html">證照&比賽</a>
-    <a href="04resume.html">履歷</a>
-    <!-- <a href="05robot.html">與我聊天</a> -->
-  </div>
+    <div class="menu-content" id="menuContent">
+        <a href="01main.html">個人簡介</a>
+        <a href="02experience.html">經歷&工作經驗</a>
+        <a href="03certificates.html">證照&比賽</a>
+        <a href="04resume.html">自傳</a>
+        <!-- <a href="05robot.html">與我聊天</a> -->
+    </div>
     
     <div class="container">
         <section id="suitable-jobs" class="profile-section">
@@ -49,7 +49,7 @@
                     <p>● 2021/10 電腦軟體應用技術士</p>
                     <p>● 2020/11 商業教育英文能力 第二級</p>
                 </div>
-                <img src="image/licenses.png" alt="Licenses and Certificates">
+                <img src="image/licenses.jpeg" alt="Licenses and Certificates">
             </div>
             
             <div class="divider"></div>
@@ -66,42 +66,26 @@
                 </div>
                 <img src="image/competition.jpg" alt="competition">
             </div>
-            
-            <!-- 
-            <div class="divider"></div>
-            
-            <div class="job-item">
-                <div>
-                    <h3>遊戲企劃人員（Game Planner）</h3>
-                    <p>公司：美商時豪科技股份有限公司</p>
-                    <p>技能要求：擅長使用Windows 2000、Excel、Outlook、PowerPoint、Word，且具數值資料統計和分析能力</p>
-                    <p>工作內容：負責新遊戲企劃與設計，進行數據分析、專案測試及資料管理，並具備良好跨部門溝通與 UI/UX 規劃能力。</p>
-                </div>
-                <img src="image/Game.png" alt="ucan適合工作">
-            </div>
-            -->
         </section>
     </div>
     
-    <script src="script.js"></script>
-  <footer>
-    Copyright © 張惠芯. All Rights Reserved.
-  </footer>
+    <footer>
+        Copyright © 張惠芯. All Rights Reserved.
+    </footer>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menuContent");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-    
-    // 響應式檢測
-    window.addEventListener('resize', function() {
-      const menuContent = document.getElementById("menuContent");
-      if (window.innerWidth > 768) {
-        menuContent.style.display = "none";  // 在大螢幕切換時重置選單
-      }
-    });
-  </script>
-</body>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menuContent");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+        
+        // 響應式檢測
+        window.addEventListener('resize', function() {
+            const menuContent = document.getElementById("menuContent");
+            if (window.innerWidth > 768) {
+                menuContent.style.display = "none";  // 在大螢幕切換時重置選單
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,114 +1,290 @@
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&display=swap');
+
 * {
+  box-sizing: border-box;
   font-family: 'Mali', sans-serif;
 }
 
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
-    margin: 0;
-    font-family: 'Mali', sans-serif;
-    background-color: #e8ccff;
-    color: #333;
-  }
-  
-  header {
-    background-color: #b577d1;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    border-top:5px solid #b577d1;
-    border-bottom: 5px solid #b577d1;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Mali', sans-serif;
-    color: #000;
-  }
-  
-  .menu-button {
-    background: none;
-    border: 1px solid #000;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Mali', sans-serif;
-  }
-  
-  .menu-content {
-    display: none;
-    position: absolute;
-    right: 20px;
-    top: 50px;
-    background-color: #cc7be5;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 150px;
-    z-index: 100;
-  }
-  
-  .menu-content a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid #d9b3ff;
-  }
-  
-  .menu-content a:hover {
-    background-color: #d9b3ff;
-  }
-  
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: 'Mali', sans-serif;
+  background-color: #dbe5ef;
+  color: #333;
+  /* 讓 Footer 可以貼到底部 */
+  display: flex;
+  flex-direction: column;
+  /* 防止手機版產生橫向捲軸 */
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #bad1ec;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-top: 5px solid #bad1ec;
+  border-bottom: 5px solid #bad1ec;
+  /* Header 不被壓縮 */
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Mali', sans-serif;
+  color: #000;
+}
+
+.menu-button {
+  background: none;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Mali', sans-serif;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  background-color: #c5d7ee;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 150px;
+  z-index: 100;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #dbe5ef;
+}
+
+.menu-content a:hover {
+  background-color: #dbe5ef;
+}
+
+.container {
+  padding: 20px;
+  /* 撐開中間剩餘空間， 讓 Footer 貼到底部 */
+  flex: 1;
+  width: 100%;
+  /* 防止內容造成橫向超出 */
+  max-width: 100%;
+}
+
+/* 工作 / 經歷項目*/
+.job-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: 'Mali', sans-serif;
+  width: 100%;
+}
+
+/* 文字區域 */
+.job-item > div {
+  flex: 1 1 60%;
+  min-width: 0;
+}
+
+/* 列點文字 */
+.job-item > div p {
+  padding-left: 28px;
+  margin: 8px 0;
+}
+
+/* 圖片*/
+.job-item img {
+  /* 桌機版圖片最大寬度*/
+  max-width: 250px;
+  width: auto;
+  height: auto;
+  /*不裁切圖片*/
+  object-fit: contain;
+  /*桌機版圖片與文字保持距離*/
+  margin-left: 20px;
+  /*桌機版往左移*/
+  transform: translateX(-60px);
+  /*不允許圖片被 flex 壓縮*/
+  flex-shrink: 0;
+  /*確保圖片是區塊元素*/
+  display: block;
+}
+
+.divider {
+  border-top: 2px solid #bad1ec;
+
+  margin: 20px 0;
+}
+
+/*平板769px ～ 1024px */
+@media screen and (max-width: 1024px) {
   .container {
-    padding: 20px;
+    padding: 15px;
   }
 
-.job-item {
-    display: flex;
-    justify-content: space-between;
+  .job-item {
+    font-size: 19px;
+    /* 平板讓圖片與文字有較好的空間 */
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    font-size: 20px;
-    font-family: 'Mali', sans-serif;
   }
-  
+
   .job-item > div {
     flex: 1 1 60%;
   }
-  
+
   .job-item img {
-    max-width: 250px;
+    /* 平板圖片縮小 */
+    max-width: 220px;
+    /* 不要讓圖片超出父元素 */
+    width: auto;
     height: auto;
+    /* 保持圖片完整 */
     object-fit: contain;
-    margin-left: 20px;
+    /* 平板仍稍微往左 */
+    transform: translateX(-20px);
+    margin-left: 10px;
+  }
+}
+
+/* 手機768px 以下 */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 15px;
+    /*確保內容不超出手機寬度*/
+    width: 100%;
+  }
+  /* 工作項目 */
+  .job-item {
+    /*改成上下排列*/
+    flex-direction: column;
+    /*水平置中*/
+    align-items: center;
+    /* 不要讓內容超出畫面*/
+    width: 100%;
+    /*文字置中*/
+    text-align: center;
+    font-size: 17px;
+  }
+  /* 文字區域*/
+  .job-item > div {
+    /*手機版文字佔滿整行*/
+    width: 100%;
+    flex: none;
+    /* 防止 flex 內容把畫面撐寬 */
+    min-width: 0;
+    text-align: left;
+  }
+
+  /* 列點文字 */
+  .job-item > div p {
+    padding-left: 15px;
+    margin: 8px 0;
+    /*文字可以正常換行*/
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* 手機圖片 */
+.job-item img {
+    transform: none;
+    margin: 15px auto 0 auto; /* 置中並增加上方間距 */
+
+    /* 限制手機版圖片大小：最多 180px，或不超過螢幕的 50% */
+    width: 50%;
+    max-width: 180px;
+    height: auto;
+
+    object-fit: contain;
+    display: block;
+    align-self: center;
     flex-shrink: 0;
   }
 
-  .divider {
-    border-top: 2px solid #cc7be5;
-    margin: 20px 0;
+  footer {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
-  
-  @media screen and (max-width: 768px) {
-    .job-item {
-      flex-direction: column;
-      align-items: center;  /* ✅ 這裡改為 center 對齊圖片 */
-      /* text-align: center;   ✅ 讓文字也一併置中 */
-    }
-  
-    .job-item img {
-      margin-left: 0;
-      margin-top: 15px;
-      max-width: 100%;
-    }
-  } 
+}
+
+/* 小手機480px 以下*/
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  /* 工作項目 */
+  .job-item {
+    font-size: 15px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 文字 */
+  .job-item > div {
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .job-item > div p {
+    padding-left: 12px;
+    margin: 7px 0;
+    line-height: 1.6;
+    /*  避免長文字超出畫面 */
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  /* 圖片 */
+.job-item img {
+    transform: none;
+    margin: 15px auto 0 auto;
+
+    /* 更小螢幕時的尺寸 */
+    width: 60%;
+    max-width: 160px;
+    height: auto;
+
+    object-fit: contain;
+    display: block;
+    align-self: center;
+  }
+
+  .divider {
+    margin: 15px 0;
+
+    border-top: 2px solid #bad1ec;
+  }
 
   footer {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 13px;
     text-align: center;
-    background-color: #b577d1;
-    padding: 10px;
-    color: white;
-    margin-top: 40px;
+    box-sizing: border-box;
   }
+}

@@ -19,9 +19,8 @@
   <div class="menu-content" id="menuContent">
     <a href="01main.html">個人簡介</a>
     <a href="02experience.html">經歷&工作經驗</a>
-    <a href="03scertificates.html">證照&比賽</a>
-    <a href="04resume.html">履歷</a>
-    <!-- <a href="05robot.html">與我聊天</a> -->
+    <a href="03certificates.html">證照&比賽</a>
+    <a href="04resume.html">自傳</a>
   </div>
 
   <main class="container">
@@ -72,13 +71,13 @@
         </div>
       </section>
     </div>
-    
   </main>
 
   <footer>
     Copyright © 張惠芯. All Rights Reserved.
   </footer>
 
+  <!-- 幾何背景容器 -->
   <div id="backgroundShapes"></div>
 
   <script>
@@ -86,26 +85,36 @@
       const menu = document.getElementById("menuContent");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
-    
-    // 響應式檢測
+
+    // 響應式切換重置選單
     window.addEventListener('resize', function() {
       const menuContent = document.getElementById("menuContent");
       if (window.innerWidth > 768) {
-        menuContent.style.display = "none";  // 在大螢幕切換時重置選單
+        menuContent.style.display = "none";
       }
     });
 
     const shapeContainer = document.getElementById('backgroundShapes');
 
-    function createShape(type, top, left, size, rotation) {
+    // 動畫類別陣列（讓每個圖形往不同方向緩慢飄移）
+    const animationClasses = ['float-slow-1', 'float-slow-2', 'float-slow-3'];
+
+    function createShape(type, topPercent, leftPercent, size) {
       const svgNS = "http://www.w3.org/2000/svg";
       const svg = document.createElementNS(svgNS, "svg");
       svg.setAttribute("width", size);
       svg.setAttribute("height", size);
       svg.classList.add("bg-shape");
-      svg.style.top = top + "px";
-      svg.style.left = left + "px";
-      svg.style.transform = `rotate(${rotation}deg)`;
+
+      // 隨機分配一種漂浮動畫
+      const animClass = animationClasses[Math.floor(Math.random() * animationClasses.length)];
+      svg.classList.add(animClass);
+
+      // 使用百分比分佈在全螢幕，動畫隨機延遲使節奏不單調
+      svg.style.top = topPercent + "vh";
+      svg.style.left = leftPercent + "vw";
+      svg.style.animationDuration = (12 + Math.random() * 10) + "s"; // 12~22秒超平滑緩慢飄動
+      svg.style.animationDelay = -(Math.random() * 10) + "s"; // 讓動畫一開始就處於不同進度
 
       let shape;
       if (type === 'circle') {
@@ -127,31 +136,29 @@
         shape.setAttribute("points", `${size / 2},0 ${size},${size / 2} ${size / 2},${size} 0,${size / 2}`);
       }
 
-      shape.setAttribute("stroke", "#ccc");
+      shape.setAttribute("stroke", "#8da7c4");
       shape.setAttribute("fill", "none");
-      shape.setAttribute("stroke-width", "1");
+      shape.setAttribute("stroke-width", "1.5");
       svg.appendChild(shape);
       shapeContainer.appendChild(svg);
     }
 
-    function generateShapes() {
-      shapeContainer.innerHTML = ""; // 清空
+    function initShapes() {
+      shapeContainer.innerHTML = "";
       const types = ['circle', 'triangle', 'rect', 'diamond'];
-      const count = 20;
+      const count = 18; // 畫面中維持 18 個圖形，美觀不雜亂
 
       for (let i = 0; i < count; i++) {
         const type = types[Math.floor(Math.random() * types.length)];
-        const top = window.scrollY + Math.random() * window.innerHeight;
-        const left = Math.random() * window.innerWidth;
-        const size = 30 + Math.random() * 50;
-        const rotation = Math.random() * 360;
-        createShape(type, top, left, size, rotation);
+        const topPercent = Math.random() * 90; // 0% ~ 90% 視窗高度
+        const leftPercent = Math.random() * 90; // 0% ~ 90% 視窗寬度
+        const size = 35 + Math.random() * 45;
+        createShape(type, topPercent, leftPercent, size);
       }
-}
+    }
 
-window.addEventListener("scroll", generateShapes);
-window.addEventListener("resize", generateShapes);
-window.addEventListener("load", generateShapes);
+    // 只在載入時生成一次，滾動時不重繪
+    window.addEventListener("DOMContentLoaded", initShapes);
   </script>
 </body>
 </html>
